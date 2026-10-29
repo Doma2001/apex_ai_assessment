@@ -27,7 +27,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - run: docker build --build-arg APP_VERSION=${{ github.sha }} -t apex-ops-api:${{ github.sha }} .
       - uses: aquasecurity/trivy-action@v0.36.0
         with:
