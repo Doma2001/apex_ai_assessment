@@ -3,7 +3,6 @@ import logging
 import os
 import sqlite3
 import sys
-
 from flask import Flask, jsonify, request
 
 VERSION = os.getenv("APP_VERSION", "dev")
@@ -24,7 +23,6 @@ if not log.handlers:
     _h.setFormatter(JsonFmt())
     log.addHandler(_h)
 log.setLevel(logging.INFO)
-
 
 
 def create_app(db_path=None):
