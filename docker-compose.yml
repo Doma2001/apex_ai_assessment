@@ -1,0 +1,19 @@
+services:
+  api:
+    image: apex-ops-api:${APP_VERSION:-dev}
+    build:
+      context: .
+      args:
+        APP_VERSION: ${APP_VERSION:-dev}
+    environment:
+      APP_VERSION: ${APP_VERSION:-dev}
+      DB_PATH: ${DB_PATH:-/data/app.db}
+    ports: ["8000:8000"]
+    volumes: ["apidata:/data"]
+    tmpfs: ["/tmp"]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    restart: unless-stopped
+volumes:
+  apidata: {}
