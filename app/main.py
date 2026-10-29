@@ -6,7 +6,7 @@ import sys
 
 from flask import Flask, jsonify, request
 
-#sqlite is used as a simple database for this example, but in production you would likely use a more robust database system
+#sqlite is used as a simple database for this example,   but in production you would likely use a more robust database system
 VERSION = os.getenv("APP_VERSION", "dev")
 DB_PATH = os.getenv("DB_PATH", "/data/app.db")
 
