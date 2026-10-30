@@ -64,8 +64,8 @@ Start on one small VM (or Fly.io/Render free-to-cheap tier) running the same com
 - Next with more time: Postgres, Prometheus + Grafana, image signing, blue/green.
 
 ## AI-use disclosure
-**EDIT THIS before submitting.** Example: "I used Claude to draft the initial project scaffold, Dockerfile, CI workflow and README. I then ran, tested and modified everything myself and can explain each part."
-I used claude for this project to write the api application and the rest of the files (scripts, ci workflow..), then as a DevOps Engineer I check all the files carefully and with the knowledge I have I edit the files as I see fit for the technical and business approach. then test the application locally without it being containerized then test it when it is containerized. finally I push the project to my github repo then check the ci workflow.
+**EDIT THIS before submitting.** 
+I used claude for this project to write the api application and the rest of the files (scripts, ci workflow..), then as a DevOps Engineer I check all the files carefully and with the knowledge I have I edit the files as I see fit for the technical and business approach. then test the application locally without it being containerized then test it when it is containerized. finally I push the project to my github repo then check the ci workflow. finally I can explain everything myself.
 
 ## Evidence checklist (add to /evidence)
 -screenshot and video of api with health and ready shown<br>
