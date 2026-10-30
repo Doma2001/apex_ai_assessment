@@ -19,6 +19,7 @@ curl localhost:8000/health && curl localhost:8000/ready
 curl -X POST localhost:8000/ops -H 'Content-Type: application/json' -d '{"name":"check pump"}'
 ```
 Tests locally with python pytest without docker: 
+```bash
 `python3 -m venv .venv`
 `source .venv/bin/activate`
 `pip install -r requirements.txt -r requirements-dev.txt && flake8 app tests && pytest -v`
@@ -27,6 +28,7 @@ Tests locally with python pytest without docker:
 `curl http://127.0.0.1:8000/ready`
 `curl -X POST http://127.0.0.1:8000/ops -H 'Content-Type: application/json' -d '{"name":"check pump"}'`
 `curl http://127.0.0.1:8000/ops`
+```
 
 ## Tests
 8 automated checks always run, plus 1 intentional failure (`FORCE_FAIL=1 pytest` or run the CI workflow manually with `force_fail` ticked). A failing `test` job blocks `build` and `deploy` (`needs:`).
