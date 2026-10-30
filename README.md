@@ -20,14 +20,14 @@ curl -X POST localhost:8000/ops -H 'Content-Type: application/json' -d '{"name":
 ```
 Tests locally with python pytest without docker: 
 ```bash
-`python3 -m venv .venv`
-`source .venv/bin/activate`
-`pip install -r requirements.txt -r requirements-dev.txt && flake8 app tests && pytest -v`
-`pytest -v`
-`curl http://127.0.0.1:8000/health`
-`curl http://127.0.0.1:8000/ready`
-`curl -X POST http://127.0.0.1:8000/ops -H 'Content-Type: application/json' -d '{"name":"check pump"}'`
-`curl http://127.0.0.1:8000/ops`
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt -r requirements-dev.txt && flake8 app tests && pytest -v
+pytest -v
+curl http://127.0.0.1:8000/health
+curl http://127.0.0.1:8000/ready
+curl -X POST http://127.0.0.1:8000/ops -H 'Content-Type: application/json' -d '{"name":"check pump"}'
+curl http://127.0.0.1:8000/ops
 ```
 
 ## Tests
