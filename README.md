@@ -68,7 +68,7 @@ Start on one small VM (or Fly.io/Render free-to-cheap tier) running the same com
 I used claude for this project to write the api application and the rest of the files (scripts, ci workflow..), then as a DevOps Engineer I check all the files carefully and with the knowledge I have I edit the files as I see fit for the technical and business approach. then test the application locally without it being containerized then test it when it is containerized. finally I push the project to my github repo then check the ci workflow.
 
 ## Evidence checklist (add to /evidence)
--screenshot and video of api with health and ready shown 
--screenshot of green CI run; red CI run (force_fail);
--screenshot of `docker compose ps`; deploy v1 then v2; rollback output; failure investigation logs.
--a failure investigation solving video and screenshots
+-screenshot and video of api with health and ready shown<br>
+-screenshot of green CI run; red CI run (force_fail);<br>
+-screenshot of `docker compose ps`; deploy v1 then v2; rollback output; failure investigation logs.<br>
+-a failure investigation solving video and screenshots<br>
