@@ -18,7 +18,15 @@ cp .env.example .env
 curl localhost:8000/health && curl localhost:8000/ready
 curl -X POST localhost:8000/ops -H 'Content-Type: application/json' -d '{"name":"check pump"}'
 ```
-Tests locally: `pip install -r requirements.txt -r requirements-dev.txt && flake8 app tests && pytest -v`
+Tests locally with python pytest without docker: 
+`python3 -m venv .venv`
+`source .venv/bin/activate`
+`pip install -r requirements.txt -r requirements-dev.txt && flake8 app tests && pytest -v`
+`pytest -v`
+`curl http://127.0.0.1:8000/health`
+`curl http://127.0.0.1:8000/ready`
+`curl -X POST http://127.0.0.1:8000/ops -H 'Content-Type: application/json' -d '{"name":"check pump"}'`
+`curl http://127.0.0.1:8000/ops`
 
 ## Tests
 8 automated checks always run, plus 1 intentional failure (`FORCE_FAIL=1 pytest` or run the CI workflow manually with `force_fail` ticked). A failing `test` job blocks `build` and `deploy` (`needs:`).
@@ -57,9 +65,10 @@ Start on one small VM (or Fly.io/Render free-to-cheap tier) running the same com
 
 ## AI-use disclosure
 **EDIT THIS before submitting.** Example: "I used Claude to draft the initial project scaffold, Dockerfile, CI workflow and README. I then ran, tested and modified everything myself and can explain each part."
+I used claude for this project to write the api application and the rest of the files (scripts, ci workflow..), then as a DevOps Engineer I check all the files carefully and with the knowledge I have I edit the files as I see fit for the technical and business approach. then test the application locally without it being containerized then test it when it is containerized. finally I push the project to my github repo then check the ci workflow.
 
 ## Evidence checklist (add to /evidence)
-Screenshot: green CI run; red CI run (force_fail); `docker compose ps`; deploy v1 then v2; rollback output; failure investigation logs.
-
-
-hello
+-screenshot and video of api with health and ready shown 
+-screenshot of green CI run; red CI run (force_fail);
+-screenshot of `docker compose ps`; deploy v1 then v2; rollback output; failure investigation logs.
+-a failure investigation solving video and screenshots
