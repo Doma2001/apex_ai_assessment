@@ -60,3 +60,6 @@ Start on one small VM (or Fly.io/Render free-to-cheap tier) running the same com
 
 ## Evidence checklist (add to /evidence)
 Screenshot: green CI run; red CI run (force_fail); `docker compose ps`; deploy v1 then v2; rollback output; failure investigation logs.
+
+
+hello
